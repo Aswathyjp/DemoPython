@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form  action='display' method="POST" enctype="multipart/form-data">
+     <h3> {{Dispform.username}}</h3>
+            <h4> {{Dispform.address}}</h4>
+            <h4> {{Dispform.age}}</h4>
+    {% csrf_token %}
+    {{form.as_p}}<br>
+    <input type="submit">
+</form>
+</body>
+</html>

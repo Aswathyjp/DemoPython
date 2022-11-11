@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form action="regform" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <label>Username :</label>
+        <input type="text" name="username" placeholder="Enter your username" > <br><br>
+        <label>DOB :</label>
+        <input type="date" name="dob" placeholder="Enter your date of birth" > <br><br>
+        <label>Age :</label>
+        <input type="text" name="age" placeholder="Enter your age" > <br><br>
+        <label> Email :</label><input type="email" name="email" placeholder="Enter your email" > <br> <br>
+        <label>Gender :</label><br>
+        <input type="radio" name="male"/> Male <br>
+        <input type="radio" name="female"/> Female <br>
+        <input type="radio" name="other"/> Other
+        <br>
+        <br>
+
+       <label>Phone :</label><input type="text" name="country code"  value="+91" size="2"/>
+                            <input type="text" name="phone" size="10"/> <br> <br>
+
+        <label>Address :</label><br><textarea cols="80" rows="5" value="address"></textarea>
+
+
+  <br><br>
+
+
+
+Department :
+</label>
+<select>
+<option value="Course">enter department</option>
+<option value="BCA">science</option>
+<option value="BBA">history</option>
+<option value="B.Tech">computer science</option>
+<option value="MBA">commerce</option>
+<option value="MCA">biology</option>
+</select>  <br><br>
+
+Course :
+</label>
+<select>
+<option value="Course">Course</option>
+<option value="BCA">BCA</option>
+<option value="BBA">BBA</option>
+<option value="B.Tech">B.Tech</option>
+<option value="MBA">MBA</option>
+<option value="MCA">MCA</option>
+<option value="M.Tech">M.Tech</option>
+</select>  <br><br>
+        <label>
+Purpose:
+</label>
+<select>
+<option value="purpose">purpose</option>
+<option value="Enquiry">Enquiry</option>
+<option value="Place order">Place order</option>
+<option value="Return">Return</option>
+
+</select><br><br>
+</label>
+        Materials Provide:
+ </label>
+        <input type="checkbox" name="dn" id="d1" value="depit note book" onclick="return       ValidateSelection();">
+<label for="d1">depit note book</label>
+<input form="myForm" type="checkbox" name="dn" id="d2"  value="pen" onclick="return ValidateSelection();">
+<label for="d2">pen</label>
+<input form="myForm" type="checkbox" name="dn" id="d3"  value="exam papers" onclick="return ValidateSelection();">
+<label for="d3">exam papers</label>
+<input type="checkbox" name="dn" id="d4" value="assignments" onclick="return ValidateSelection();">
+<label for="d4">assignments</label>
+        <br><br>
+          <a  type='submit' class="btn btn-outline-primary" > submit </a>
+          <a  type='button' class="btn btn-outline-danger" href="{% url 'reg:logout' %}" > Logout </a>
+    </div>
+</form>
+{% endblock %}

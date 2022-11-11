@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class=" my_prod_title">WELCOME TO OUR
+SCHOOL STORE</h1><br>
+    <p class="text-justify my_prod_text">
+
+Welcome to The Children’s Center of Austin, providing the finest quality childcare and education for infants through pre-kindergarten,
+        as well as after-school care for kindergarten through fifth grade and summer camp for ages 6-10. The Children’s Center of Austin offers
+        a safe, clean, and nurturing setting with a theme-based educational curriculum designed to promote learning and exploration in a warm and fun
+
+        environment. Both of our locations feature controlled access, separate classrooms, shaded playgrounds, and fun activity areas for art,
+        swimming, and extracurricular activities</p>
+    <div>
+<a class="btn btn-outline-primary" href="{% url 'reg:login' %}">click here to login</a>
+    </div>
+</div>
+{% endblock %}
